@@ -10,10 +10,12 @@ function ExpenseForm(props) {
         setTitle(event.target.value);
         console.log(event.target.value);
     };
+
     const amountChangeHandler = (event) => {
         setAmount(event.target.value);
         console.log(event.target.value);
     };
+    
     const dateChangeHandler = (event) => {
         setDate(event.target.value);
         console.log(event.target.value);
@@ -32,7 +34,6 @@ function ExpenseForm(props) {
         setTitle('');
         setAmount('');
         setDate('');
-
     };
 
     return (
@@ -68,6 +69,7 @@ function ExpenseForm(props) {
                 </div>
             </div>
             <div className='new-expense__actions'>
+                <button type='cancel' onClick={props.onCancel}>Cancel</button>
                 <button type='submit'>Add Expense</button>
             </div>
         </form>
